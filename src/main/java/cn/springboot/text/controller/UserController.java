@@ -15,6 +15,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author Administrator
+ */
 @RestController
 public class UserController {
     @Autowired
@@ -32,7 +35,8 @@ public class UserController {
     public String getUserSubmit(String name, String password, HttpServletResponse res) {
         //后台代码传送到前台
         res.setHeader("Access-Control-Allow-Origin", "*");
-        Map<String, Object> map = new HashMap<String, Object>();
+        //noinspection AlibabaCollectionInitShouldAssignCapacity
+        Map<String, Object> map = new HashMap<String, Object>(16);
         User user = new User();
         user = userService.getUserSubmit(name, password);
         if (user.getId() != null) {

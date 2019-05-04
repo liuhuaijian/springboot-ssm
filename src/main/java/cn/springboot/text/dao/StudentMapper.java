@@ -7,10 +7,10 @@ import org.apache.ibatis.annotations.Param;
 import java.util.List;
 import java.util.Map;
 import java.util.Date;
- @Mapper
+
+@Mapper
 public interface StudentMapper {
     /**
-     *
      * @return
      */
     List<Student> selectAll();
@@ -21,6 +21,7 @@ public interface StudentMapper {
 
     /**
      * 获取一段时间内的用户
+     *
      * @param params
      * @return
      */
@@ -28,12 +29,11 @@ public interface StudentMapper {
 
 
     /**
-     *
      * @param bTime 开始时间
      * @param eTime 结束时间
      * @return
      */
-    List<Student> selectBetweenCreatedTimeAnno(@Param("bTime")Date bTime, @Param("eTime")Date eTime);
+    List<Student> selectBetweenCreatedTimeAnno(@Param("bTime") Date bTime, @Param("eTime") Date eTime);
 
     /**
      * 根据输入的学生信息进行条件检索
@@ -71,6 +71,7 @@ public interface StudentMapper {
 
     /**
      * 获取 id 集合中的用户信息
+     *
      * @param ids
      * @return
      */

@@ -8,7 +8,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @EnableAsync
 @SpringBootApplication
-@MapperScan("cn.springboot.text.dao")
+@MapperScan({"cn.springboot.text.dao","cn.springboot.text.alipay.mapper"})
 public class TextApplication {
 
     public static void main(String[] args) {
